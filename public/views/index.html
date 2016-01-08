@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="scripts/vendors/angular.min.js"></script>
+    <script src="scripts/vendors/angular-animate.min.js"></script>
+    <script src="scripts/client.js"></script>
+    <link rel="stylesheet" href="styles/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<div ng-controller="myController">
+<div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-2">
+        <button class="btn btn-primary" ng-click="getCandidates()">Here are your candidates!!</button>
+        <ul>
+            <li class="animation" ng-repeat="candidate in democrats">{{candidate}}</li>
+            <li class="animation" ng-repeat="candidate in republicans">{{candidate}}</li>
+        </ul>
+        <button class="btn btn-success" ng-click="selectPresident()">Here is your President!!</button>
+        <h1 class="animation">{{president}}</h1>
+    </div>
+    <div class="col-md-5"></div>
+</div>
+</body>
+</html>
